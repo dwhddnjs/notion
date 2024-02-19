@@ -22,7 +22,6 @@ export const DocumentList = ({
   const params = useParams()
   const router = useRouter()
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
-  console.log("expanded: ", expanded)
 
   const onExpand = (documentId: string) => {
     setExpanded((prevExpanded) => ({
@@ -34,8 +33,6 @@ export const DocumentList = ({
   const documents = useQuery(api.documents.getSidebar, {
     parentDocument: parentDocumentId,
   })
-
-  console.log("documents: ", documents)
 
   const onRedirect = (documentId: string) => {
     router.push(`/documents/${documentId}`)
@@ -68,7 +65,7 @@ export const DocumentList = ({
         No pages inside
       </p>
       {documents.map((document) => (
-        <div key={document._id} className="border-2">
+        <div key={document._id}>
           <Item
             id={document._id}
             onClick={() => onRedirect(document._id)}
