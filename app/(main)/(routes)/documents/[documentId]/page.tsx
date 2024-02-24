@@ -1,4 +1,5 @@
 "use client"
+import { Toolbar } from "@/components/toolbar"
 import { api } from "@/convex/_generated/api"
 import { Id } from "@/convex/_generated/dataModel"
 import { getById } from "@/convex/documents"
@@ -12,7 +13,7 @@ interface DocumentIdPageProps {
 }
 
 const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
-  const document = useQuery(api.documents / getById, {
+  const document = useQuery(api.documents.getById, {
     documentId: params.documentId,
   })
 
