@@ -16,6 +16,7 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
   const document = useQuery(api.documents.getById, {
     documentId: params.documentId,
   })
+  console.log("document: ", document)
 
   if (document === undefined) {
     return <div>Loading..</div>
@@ -25,7 +26,7 @@ const DocumentIdPage = ({ params }: DocumentIdPageProps) => {
     <div className="pb-40">
       <div className="h-[35vh]" />
       <div className="md:max-x-3xl lg:max-w-4xl mx-auto">
-        <Toolbar initalData={document} />
+        <Toolbar initialData={document} />
       </div>
     </div>
   )
