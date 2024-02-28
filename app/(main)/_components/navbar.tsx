@@ -9,6 +9,7 @@ import React from "react"
 import { Title } from "./title"
 import { Banner } from "./banner"
 import { Menu } from "./menu"
+import { Publish } from "./publish"
 
 interface NavbarProps {
   isCollapsed: boolean

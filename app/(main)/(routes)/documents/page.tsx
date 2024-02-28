@@ -7,7 +7,7 @@ import { useMutation } from "convex/react"
 import { PlusCircle } from "lucide-react"
 
 import Image from "next/image"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import React from "react"
 import { toast } from "sonner"
 
